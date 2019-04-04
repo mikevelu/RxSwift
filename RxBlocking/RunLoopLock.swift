@@ -12,7 +12,7 @@ import RxSwift
 
 #if os(Linux)
     import Foundation
-    let runLoopMode: RunLoopMode = RunLoopMode.defaultRunLoopMode
+    let runLoopMode: RunLoop.Mode = .default
     let runLoopModeRaw: CFString = unsafeBitCast(runLoopMode.rawValue._bridgeToObjectiveC(), to: CFString.self)
 #else
     let runLoopMode: CFRunLoopMode = CFRunLoopMode.defaultMode
